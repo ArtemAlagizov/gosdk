@@ -11,28 +11,31 @@ It is possible to support the sdk for other variations of Linux as well.
 
 ## Usage
 - Save below code as sdkversion.go
+  ```go
+  package main
 
-        package main
+  import (
+      "fmt"
 
-        import (
-            "fmt"
+      "github.com/0chain/gosdk/zcncore"
+  )
 
-            "github.com/0chain/gosdk/zcncore"
-        )
-
-        func main() {
-            fmt.Println("gosdk version: ", zcncore.GetVersion())
-        }
-
+  func main() {
+      fmt.Println("gosdk version: ", zcncore.GetVersion())
+  }
+  ```
 - Run below command: (if you don't have gosdk already in your GOPATH)
-
-        go get github.com/0chain/gosdk
+  ```go
+  go get github.com/0chain/gosdk
+  ```
 - Build the sample application sdkversion
-
-        go build -o sdkversion sdkversion.go
+  ```go
+  go build -o sdkversion sdkversion.go
+  ```
 - Run the executable
-
-        ./sdkversion
+  ``` bash 
+  ./sdkversion
+  ```
 - If it prints the gosdk version installed then setup is complete.
 
 
@@ -41,18 +44,18 @@ It is possible to support the sdk for other variations of Linux as well.
 - Xcode Command Line Tools is required to build SDK for iOS.
 - Android studio with NDK is required to build SDK for Android
 - Run below command for the first time to setup gomobile environment
-
-        make setup-gomobile
-
+  ```
+  make setup-gomobile
+  ```
 - Use below commands in the root folder of the repo to build Mobile SDK
-
-        For iOS and Android:
-                make build-mobilesdk IOS=1 ANDROID=1
-        For iOS only:
-                make build-mobilesdk IOS=1
-        For Android only:
-                make build-mobilesdk ANDROID=1
-
+  ```
+  For iOS and Android:
+          make build-mobilesdk IOS=1 ANDROID=1
+  For iOS only:
+          make build-mobilesdk IOS=1
+  For Android only:
+          make build-mobilesdk ANDROID=1
+  ```
 ### FAQ ###
 
 - [How to install GO on any platform](https://golang.org/doc/install)
